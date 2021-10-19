@@ -1,13 +1,14 @@
-import _ from 'lodash';
 import './style.css';
+import Logo from './img/logo.png';
+import { displayCommentPopup } from './comments.js';
 
-function component() {
-  const element = document.createElement('div');
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const button = document.querySelectorAll('[data-id="33492"]')[0];
 
-  return element;
-}
-
-document.body.appendChild(component());
+button.addEventListener('click', (e) => {
+  const tvshowId = e.target.getAttribute('data-id');
+  displayCommentPopup(tvshowId);
+});
