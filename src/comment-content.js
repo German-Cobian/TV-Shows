@@ -1,8 +1,8 @@
 const popup = document.getElementById('popup');
-const { backgroundColor } = document.body.style;
+const bodyStyle = document.body.style;
 
 const generatePopupContent = (tvShow, commentList) => {
-  backgroundColor = 'rgba(0,0,0,0.6)';
+  bodyStyle.setProperty('background-color', 'rgba(0,0,0,0.6)');
   popup.innerHTML = '';
 
   const container = document.createElement('div');
@@ -50,7 +50,7 @@ const generatePopupContent = (tvShow, commentList) => {
   rating.innerText = tvShow.rating.average;
 
   const genre = document.createElement('p');
-  genre.innerText = tvShow.genres[0];
+  [genre.innerText] = tvShow.genres;
 
   descriptionTwo.appendChild(rating, genre);
 
@@ -67,8 +67,7 @@ const generatePopupContent = (tvShow, commentList) => {
       const commentItem = document.createElement('p');
       commentItem.innerText = `${comment.creation_date} ${comment.username} ${comment.comment}`;
       return commentItem;
-    }),
-  );
+    }));
 };
 
 export default generatePopupContent;
