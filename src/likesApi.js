@@ -1,29 +1,29 @@
-const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/'
-const gameEndpoint = '/apps/6XTY5c5cttB49FIPrztB/likes/';
+const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
+const likeEndpoint = '/apps/6XTY5c5cttB49FIPrztB/likes/';
 
 export const addLike = async (id) => {
+  const likeBody = {
+    item_id: id,
+  };
 
-  const response = await fetch(
-    `${baseUrl}${gameEndpoint}`,
-    {
-      method: 'POST',
-      body: JSON.stringify({
-      }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
+  const response = await fetch(`${baseUrl}${likeEndpoint}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
     },
-  );
+    body: JSON.stringify(likeBody),
+  });
+
+  const status = await results.json();
+  return response.status;
 };
 
-export const refreshScoreTableAPI = async () => {
-  const response = await fetch(
-    `${baseUrl}${gameEndpoint}`,
-  )
-    .then((response) => response.json())
-    .then((json) => {
-      json.result.forEach((element) => { 
+export const getLikes = async (id) => {
+  const result = await fetch(`${baseUrl}${likeEndpoint}?item_id=${id}`);
 
-      });
-    });
+  const likes = await result.json();
+  if (likes.error?.status === 500 || likes.error?.status === 400) {
+    return [];
+  }
+  return likes;
 };
