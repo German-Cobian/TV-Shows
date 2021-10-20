@@ -1,6 +1,5 @@
 node_modules
 coverage
-dist/index.html
 src/index.html
 src/index.js
 src/sum.js
