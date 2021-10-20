@@ -3,6 +3,14 @@ body {
   padding: 0;
 }
 
+.popup-container {
+  position: absolute;
+  padding: 2rem 0;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+}
+
 .inner-content,
 .description-container,
 .comments-container,
@@ -12,13 +20,16 @@ body {
 }
 
 .description-container,
-.comments-container,
-.comment-form {
+.comments-container {
   width: fit-content;
 }
 
 .inner-content {
   align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: azure;
+  padding: 3rem 0;
 }
 
 .photo-close {
@@ -41,6 +52,10 @@ body {
   padding: 0 0.5rem;
 }
 
+h2, h3 {
+  text-align: center;
+}
+
 .description-items {
   display: flex;
 }
@@ -49,6 +64,13 @@ body {
   padding: 0 1rem;
 }
 
-.comment-form > * {
-  flex-grow: 1;
+.comment-form,
+.comments-container {
+  width: 75%;
+}
+
+.comment-form > *:not(h3) {
+  width: fit-content;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
 }
