@@ -3,11 +3,50 @@ body {
   padding: 0;
 }
 
-.comment-form,
-.inner-content {
+.inner-content,
+.description-container,
+.comments-container,
+.comment-form {
   display: flex;
   flex-direction: column;
+}
+
+.description-container,
+.comments-container,
+.comment-form {
+  width: fit-content;
+}
+
+.inner-content {
   align-items: center;
+}
+
+.photo-close {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 'left center right';
+}
+
+.show-cover {
+  grid-area: center;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  grid-area: right;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 0.5rem;
+}
+
+.description-items {
+  display: flex;
+}
+
+.description-items > * {
+  padding: 0 1rem;
 }
 
 .comment-form > * {

@@ -24,6 +24,8 @@ const generatePopupContent = (tvShow, commentList) => {
   showCover.src = tvShow.image.medium;
 
   const closeButton = document.createElement("button");
+  closeButton.classList.add('close-button');
+
   const closeIcon = document.createElement("i");
   closeIcon.classList.add("fas", "fa-times", "fa-2x");
 
@@ -40,33 +42,38 @@ const generatePopupContent = (tvShow, commentList) => {
   const descriptionHeader = document.createElement("h2");
   descriptionHeader.innerText = tvShow.name;
 
+  const descriptionItems = document.createElement('div');
+  descriptionItems.classList.add('description-items');
+
   const descriptionOne = document.createElement("div");
   descriptionOne.classList.add("description-1");
 
   const network = document.createElement("p");
-  network.innerText = tvShow.network.name;
+  network.innerText = `Network: ${tvShow.network.name}`;
 
   const language = document.createElement("p");
-  language.innerText = tvShow.language;
+  language.innerText = `Language: ${tvShow.language}`;
 
   descriptionOne.appendChild(network);
   descriptionOne.appendChild(language);
 
   const descriptionTwo = document.createElement("div");
-  descriptionOne.classList.add("description-2");
+  descriptionTwo.classList.add("description-2");
 
   const rating = document.createElement("p");
-  rating.innerText = tvShow.rating.average;
+  rating.innerText = `Rating: ${tvShow.rating.average}`;
 
   const genre = document.createElement("p");
-  [genre.innerText] = tvShow.genres;
+  genre.innerText = `Genre: ${tvShow.genres[0]}`;
 
   descriptionTwo.appendChild(genre);
   descriptionTwo.appendChild(rating);
 
+  descriptionItems.appendChild(descriptionOne);
+  descriptionItems.appendChild(descriptionTwo);
+
   descriptionContainer.appendChild(descriptionHeader);
-  descriptionContainer.appendChild(descriptionOne);
-  descriptionContainer.appendChild(descriptionTwo);
+  descriptionContainer.appendChild(descriptionItems);
 
   const commentsContainer = document.createElement("div");
   commentsContainer.classList.add("comments-container");

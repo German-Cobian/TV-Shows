@@ -2,9 +2,15 @@
 
 const popup = document.getElementById('popup');
 
-const generateCommentForm = () => {
+const submitComment = (event, id, user, text) => {
+    event.preventDefault();
+    console.log(`Id: ${id}, Username: ${user}, Text: ${text}`);
+}
+
+const generateCommentForm = (id) => {
     const commentForm = document.createElement('form');
     commentForm.classList.add('comment-form');
+    commentForm.action = '#';
     
     const formHeader = document.createElement('h3');
     formHeader.innerText = 'Add a comment';
@@ -18,16 +24,18 @@ const generateCommentForm = () => {
     commentText.placeholder = 'Type your comment here...';
     commentText.classList.add('comment-text');
 
-    const submitComment = document.createElement('button');
-    submitComment.type = 'button';
-    submitComment.innerText = 'Submit Comment';
+    const commentButton = document.createElement('button');
+    commentButton.type = 'submit';
+    commentButton.innerText = 'Comment';
 
     commentForm.appendChild(formHeader);
     commentForm.appendChild(usernameInput);
     commentForm.appendChild(commentText);
-    commentForm.appendChild(submitComment);
+    commentForm.appendChild(commentButton);
 
-    popup.appendChild(commentForm);
+    commentForm.addEventListener('submit', (e) => { submitComment(e, id, usernameInput.value, commentText.value); });
+
+    popup.children[0].children[0].appendChild(commentForm);
 }
 
 export default generateCommentForm;

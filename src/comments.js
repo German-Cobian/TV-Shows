@@ -8,7 +8,7 @@ const displayCommentPopup = async (id) => {
   const commentList = await getComments(id);
 
   generatePopupContent(tvShow, commentList);
-  generateCommentForm();
+  generateCommentForm(id);
 };
 
 export default displayCommentPopup;
