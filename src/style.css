@@ -3,7 +3,8 @@ body {
   padding: 0;
 }
 
-.comment-form {
+.comment-form,
+.inner-content {
   display: flex;
   flex-direction: column;
   align-items: center;
