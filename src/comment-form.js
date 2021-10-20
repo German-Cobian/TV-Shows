@@ -4,6 +4,7 @@ const popup = document.getElementById('popup');
 
 const generateCommentForm = () => {
     const commentForm = document.createElement('form');
+    commentForm.classList.add('comment-form');
     
     const formHeader = document.createElement('h3');
     formHeader.innerText = 'Add a comment';
@@ -24,7 +25,9 @@ const generateCommentForm = () => {
     commentForm.appendChild(formHeader);
     commentForm.appendChild(usernameInput);
     commentForm.appendChild(commentText);
-    commentText.appendChild(submitComment);
+    commentForm.appendChild(submitComment);
+
+    popup.appendChild(commentForm);
 }
 
 export default generateCommentForm;
