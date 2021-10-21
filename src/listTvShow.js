@@ -32,12 +32,12 @@ const displayTvShows = async () => {
         <div class="tvshow-listcontent">
           <img src="${image}" />
         </div>
-          <div>
-            <h2>${tvShows[i].show.name}</h2>
-            <p>${numberOfLikes}</p>
-          </div>
-          <button data-id="${tvShows[i].show.id}" class="btn-comments">Comments</button>
-          <span like-id="${tvShows[i].show.id}" class="btn-likes"><i class="fas fa-heart"></i></span>
+        <div>
+          <h2>${tvShows[i].show.name}</h2>
+          <p>${numberOfLikes}</p>
+        </div>
+        <button data-id="${tvShows[i].show.id}" class="btn-comments">Comments</button>
+        <span like-id="${tvShows[i].show.id}" class="btn-likes"><i class="fas fa-heart"></i></span>
       </div>`);
 
     const button = document.querySelectorAll(`[data-id="${tvShows[i].show.id}"]`)[0];
@@ -48,15 +48,15 @@ const displayTvShows = async () => {
 
     const likeBtn = document.querySelectorAll(`[like-id="${tvShows[i].show.id}"]`)[0];
     likeBtn.addEventListener('click', async (e) => {
-      const tvShowId = e.target.parentElement.parentElement.getAttribute('like-id');
-      const status = await addLike(Number(tvShowId));
+      const tvShowId = e.target.parentElement.getAttribute('like-id');
+      const status = await addLike(tvShowId);
       const newLikes = await getLikes(tvShowId);
-      console.log(newLikes)
-      const newLikesObject = newLikes.filter((like) => like.item_id === tvShows[i].show.id);
+
+      const newLikesObject = newLikes.filter((like) => like.item_id === tvShowId);
+      console.log(newLikesObject);
       const numberOfLikes = `${newLikesObject[0].likes} likes`;
-      console.log(numberOfLikes);
+      console.log(numberOfLikes)
       if (status === 201) {
-        console.log(likeDisplay);
         const likeDisplay = likeBtn.previousElementSibling.previousElementSibling.children[1];
         likeDisplay.innerText = numberOfLikes;
       }

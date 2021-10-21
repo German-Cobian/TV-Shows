@@ -1,9 +1,18 @@
 body {
   margin: 0;
+  min-height: 100vh;
 }
 
 .navbar {
   display: flex;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar-list {
@@ -19,4 +28,33 @@ body {
 .logo {
   width: 100px;
   height: 100px;
+}
+
+#tvshow-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 150px;
+}
+
+.tvshow-list-container {
+  margin: 25px;
+}
+
+.btn-likes {
+  margin-left: 10px;
+  color: rgb(226, 88, 88);
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  text-align: center;
+  margin: 30px;
 }
