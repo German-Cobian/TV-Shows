@@ -51,11 +51,8 @@ const displayTvShows = async () => {
       const tvShowId = e.target.parentElement.getAttribute('like-id');
       const status = await addLike(tvShowId);
       const newLikes = await getLikes(tvShowId);
-
       const newLikesObject = newLikes.filter((like) => like.item_id === tvShowId);
-      console.log(newLikesObject);
       const numberOfLikes = `${newLikesObject[0].likes} likes`;
-      console.log(numberOfLikes)
       if (status === 201) {
         const likeDisplay = likeBtn.previousElementSibling.previousElementSibling.children[1];
         likeDisplay.innerText = numberOfLikes;
