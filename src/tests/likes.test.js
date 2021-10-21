@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
- describe('Adding Likes', () => {
+describe('Adding Likes', () => {
   document.body.innerHTML = ` 
     <div class="tvshow-list-container">
       <div class="tvshow-listcontent">

@@ -1,5 +1,5 @@
 import { getTvShows } from './tvShowsApi.js';
-//import displayCommentPopup from './comments.js';
+// import displayCommentPopup from './comments.js';
 import { addLike, getLikes } from './likesApi.js';
 
 const countTvShows = () => {
@@ -42,7 +42,7 @@ const displayTvShows = async () => {
 
     const button = document.querySelectorAll(`[data-id="${tvShows[i].show.id}"]`)[0];
     button.addEventListener('click', (e) => {
-      const tvShowId = e.target.getAttribute('data-id');
+      //const tvShowId = e.target.getAttribute('data-id');
       //displayCommentPopup(tvShowId);
     });
 
