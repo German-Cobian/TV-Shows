@@ -71,7 +71,7 @@ const generatePopupContent = (tvShow, commentList) => {
 
   const descriptionThree = document.createElement('div');
   descriptionThree.classList.add('description-3');
-  descriptionThree.innerHTML = tvShow.summary;
+  descriptionThree.innerHTML = tvShow.summary.replaceAll('<b>', '');
 
   descriptionItems.appendChild(descriptionOne);
   descriptionItems.appendChild(descriptionTwo);

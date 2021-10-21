@@ -86,6 +86,7 @@ h2, h3 {
 .comment-form,
 .comments-container {
   width: 75%;
+  max-width: 20rem;
 }
 
 .comment-form > *:not(h3) {
@@ -94,8 +95,16 @@ h2, h3 {
   padding: 0.5rem;
 }
 
+.comment-text {
+  min-height: 6rem;
+  max-height: 8rem;
+  min-width: 10rem;;
+  max-width: 15rem;
+}
+
 @media screen and (max-width: 600px) {
   .inner-content {
     height: 25rem;
   }
 }
+
