@@ -1,10 +1,10 @@
-// import { createComment } from "./comments-api";
+import { createComment } from "./comments-api";
 
 const popup = document.getElementById('popup');
 
 const submitComment = (event, id, user, text) => {
   event.preventDefault();
-  // console.log(`Id: ${id}, Username: ${user}, Text: ${text}`);
+  createComment(id, user, text);
 };
 
 const generateCommentForm = (id) => {
@@ -20,7 +20,6 @@ const generateCommentForm = (id) => {
   usernameInput.placeholder = 'Enter your name (required)';
   usernameInput.required = true;
   usernameInput.type = 'text';
-  usernameInput.pattern = '/^[a-z]+$/m';
   usernameInput.title = 'No spaces. All lowercase';
 
   const commentText = document.createElement('textarea');
