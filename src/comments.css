@@ -1,4 +1,4 @@
-body {
+#popup {
   margin: 0;
   padding: 0;
 }
@@ -53,11 +53,11 @@ body {
   border: none;
   grid-area: right;
   width: fit-content;
-  height: fit-content;
   padding: 0.5rem 0.75rem;
 }
 
-h2, h3 {
+h2,
+h3 {
   text-align: center;
 }
 
@@ -95,10 +95,14 @@ h2, h3 {
   padding: 0.5rem;
 }
 
+.invalid {
+  outline-color: red;
+}
+
 .comment-text {
   min-height: 6rem;
   max-height: 8rem;
-  min-width: 10rem;;
+  min-width: 10rem;
   max-width: 15rem;
 }
 
@@ -107,4 +111,3 @@ h2, h3 {
     height: 25rem;
   }
 }
-
