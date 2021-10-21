@@ -33,7 +33,11 @@ const generateCommentForm = (id) => {
     commentForm.appendChild(commentText);
     commentForm.appendChild(commentButton);
 
-    commentForm.addEventListener('submit', (e) => { submitComment(e, id, usernameInput.value, commentText.value); });
+    commentForm.addEventListener('submit', (e) => { 
+        submitComment(e, id, usernameInput.value, commentText.value);
+        usernameInput.value = '';
+        commentText.value = '';
+    });
 
     popup.children[0].children[0].appendChild(commentForm);
 }

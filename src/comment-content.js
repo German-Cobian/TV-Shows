@@ -61,7 +61,7 @@ const generatePopupContent = (tvShow, commentList) => {
   descriptionTwo.classList.add("description-2");
 
   const rating = document.createElement("p");
-  rating.innerText = `Rating: ${tvShow.rating.average}`;
+  rating.innerText = `Rating: ${tvShow.rating.average}/10`;
 
   const genre = document.createElement("p");
   genre.innerText = `Genre: ${tvShow.genres[0]}`;
@@ -69,11 +69,16 @@ const generatePopupContent = (tvShow, commentList) => {
   descriptionTwo.appendChild(genre);
   descriptionTwo.appendChild(rating);
 
+  const descriptionThree = document.createElement('div');
+  descriptionThree.classList.add('description-3');
+  descriptionThree.innerHTML = tvShow.summary;
+
   descriptionItems.appendChild(descriptionOne);
   descriptionItems.appendChild(descriptionTwo);
 
   descriptionContainer.appendChild(descriptionHeader);
   descriptionContainer.appendChild(descriptionItems);
+  descriptionContainer.appendChild(descriptionThree);
 
   const commentsContainer = document.createElement("div");
   commentsContainer.classList.add("comments-container");
