@@ -1,3 +1,5 @@
+import countComments from "./comment-counter";
+
 const popup = document.getElementById("popup");
 const bodyStyle = document.body.style;
 
@@ -84,7 +86,7 @@ const generatePopupContent = (tvShow, commentList) => {
   commentsContainer.classList.add("comments-container");
 
   const commentsHeader = document.createElement("h3");
-  commentsHeader.innerText = `Comments: ${commentList.length}`;
+  commentsHeader.innerText = `Comments: ${countComments(commentList)}`;
 
   commentsContainer.appendChild(commentsHeader);
 

@@ -7,6 +7,10 @@ const submitComment = (event, id, user, text) => {
     console.log(`Id: ${id}, Username: ${user}, Text: ${text}`);
 }
 
+const validateUsername = (event) => {
+    console.log(event.currentTarget.value);
+}
+
 const generateCommentForm = (id) => {
     const commentForm = document.createElement('form');
     commentForm.classList.add('comment-form');
@@ -18,10 +22,13 @@ const generateCommentForm = (id) => {
     const usernameInput = document.createElement('input');
     usernameInput.classList.add('username');
     usernameInput.placeholder = 'Enter your name';
+    usernameInput.required = true;
     usernameInput.type = 'text';
+    usernameInput.addEventListener('input', validateUsername);
 
     const commentText = document.createElement('textarea');
     commentText.placeholder = 'Type your comment here...';
+    commentText.required = true;
     commentText.classList.add('comment-text');
 
     const commentButton = document.createElement('button');
