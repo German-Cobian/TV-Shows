@@ -1,4 +1,5 @@
 import { getTvShows } from './tvShowsApi.js';
+import displayCommentPopup from './comments.js';
 import { addLike, getLikes } from './likesApi.js';
 
 const countTvShows = () => {
@@ -38,6 +39,12 @@ const displayTvShows = async () => {
         <button data-id="${tvShows[i].show.id}" class="btn-comments">Comments</button>
         <span like-id="${tvShows[i].show.id}" class="btn-likes"><i class="fas fa-heart"></i></span>
       </div>`);
+
+    const button = document.querySelectorAll(`[data-id="${tvShows[i].show.id}"]`)[0];
+    button.addEventListener('click', (e) => {
+      const tvShowId = e.target.getAttribute('data-id');
+      displayCommentPopup(tvShowId);
+    });
 
     const likeBtn = document.querySelectorAll(`[like-id="${tvShows[i].show.id}"]`)[0];
     likeBtn.addEventListener('click', async (e) => {
