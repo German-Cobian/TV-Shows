@@ -50,11 +50,12 @@
 
 .close-button {
   justify-self: flex-end;
+  align-self: flex-start;
   background-color: transparent;
   border: none;
   grid-area: right;
-  width: fit-content;
-  height: fit-content;
+  width: auto;
+  height: auto;
   padding: 0.5rem 0.75rem;
 }
 

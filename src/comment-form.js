@@ -1,4 +1,4 @@
-//import { createComment } from "./comments-api";
+import { createComment } from "./comments-api";
 import CommentFlag from "./comment-flags.js";
 
 const popup = document.getElementById('popup');
@@ -7,10 +7,8 @@ const textFlag = new CommentFlag();
 
 const submitComment = (event, id, user, text) => {
   event.preventDefault();
-  //createComment(id, user, text);
   if (userFlag.isValid && textFlag.isValid) {
-    console.log(`Id: "${id}"\nUsername: "${user.value}"\nComment: "${text.value}"`);
-    console.log(text.value.length);
+    createComment(id, user, text);
     user.value = '';
     text.value = '';
   }
@@ -62,7 +60,7 @@ const generateCommentForm = (id) => {
   usernameInput.type = 'text';
   usernameInput.title = 'No spaces. All lowercase. Min 3 chars. Max 15 chars.';
 
-  usernameInput.addEventListener('input', (e) => validateText(e, new RegExp(/^[a-z0-9]{3,15}$/), userFlag));
+  //usernameInput.addEventListener('input', (e) => validateText(e, new RegExp(/^[a-z0-9]{3,15}$/), userFlag));
 
   const countParagraph = document.createElement('p');
 
