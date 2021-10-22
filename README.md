@@ -4,12 +4,11 @@
 
 > This website displays TV shows in the mystery genre. The user can input "likes" as well as comments on the shows of his/her choice. The comment button brings up a popup window with information regarding the show (title, network, genre, language, rating and a short description of the plot).
 
-![screenshot](./app_![Captura de Pantalla 2021-10-21 a la(s) 20 43 02](https://user-images.githubusercontent.com/68709712/138390380-d320ee7d-96ef-4da6-ae0f-c80d57251335.png)
-screenshot.png)
+![Captura de Pantalla 2021-10-21 a la(s) 20 43 02](https://user-images.githubusercontent.com/68709712/138390380-d320ee7d-96ef-4da6-ae0f-c80d57251335.png)
 
 ![Captura de Pantalla 2021-10-21 a la(s) 20 43 37](https://user-images.githubusercontent.com/68709712/138390483-c7988110-1ef6-42f5-b13d-e88b7f4f16dc.png)
 
-The application make API calls to the TVMAZE API retrieving information about the movies. Another API, Involvement API, is responsible for sacing likes and getting the number of likes, saving comments and getting list of comments. All those functionalities is tied-up in a single codebase, that makes use of modern tools as Webpack, Jest for testing and ES6 arrow functions.
+The application makes API calls to the TVMAZE API retrieving information about the movies. Another API, Involvement API, is responsible for saving likes and getting the number of likes, saving comments and getting a list of comments. All those functionalities are tied-up in a single codebase.
 
 ## Built With
 
@@ -26,10 +25,6 @@ The application make API calls to the TVMAZE API retrieving information about th
 [Live Demo Link](https://livedemo.com)
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
@@ -78,4 +73,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/German-Cobian/TV-Shows/blob/develop/LICENSE) licensed.
