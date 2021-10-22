@@ -20,12 +20,15 @@ const displayTvShows = async () => {
   tvShowsList.innerHTML = '';
   /* eslint-disable no-await-in-loop */
   for (let i = 0; i < tvShows.length; i += 1) {
-    const likeObject = likes.filter((like) => like.item_id === tvShows[i].show.id);
+    // eslint-disable-next-line max-len
+    const likeObject = likes.filter((like) => like.item_id == tvShows[i].show.id);
+    console.log(likeObject);
 
     let numberOfLikes = '';
     if (likeObject.length > 0) {
       numberOfLikes = `${likeObject[0].likes} likes`;
-    }
+   }
+
     const image = tvShows[i].show.image?.medium ?? 'https://pics.filmaffinity.com/sherlock_holmes-617003864-large.jpg';
     tvShowsList.insertAdjacentHTML('beforeend', ` 
       <div class="tvshow-list-container">

@@ -1,4 +1,4 @@
-const searchMysteryTvShowsURL = 'https://api.tvmaze.com/search/shows?q=mystery';
+const searchMysteryTvShowsURL = 'https://api.tvmaze.com/search/shows?q=comedy';
 const MysteryTvShowsBaseURL = 'https://api.tvmaze.com/shows/';
 
 const getTvShows = async () => {

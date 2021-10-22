@@ -2,7 +2,7 @@
 
 # TV-Shows
 
-> This website displays TV shows in the mystery genre. The user can input "likes" as well as comments on the shows of his/her choice. The comment button brings up a popup window with information regarding the show (title, network, genre, language, rating and a short description of the plot).
+> This website displays TV shows in the comedy genre. The user can input "likes" as well as comments on the shows of his/her choice. The comment button brings up a popup window with information regarding the show (title, network, genre, language, rating and a short description of the plot).
 
 ![Captura de Pantalla 2021-10-21 a la(s) 20 43 02](https://user-images.githubusercontent.com/68709712/138390380-d320ee7d-96ef-4da6-ae0f-c80d57251335.png)
 
@@ -22,7 +22,7 @@ The application makes API calls to the TVMAZE API retrieving information about t
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+https://german-cobian.github.io/TV-Shows/dist/index.html
 
 ## Getting Started
 
