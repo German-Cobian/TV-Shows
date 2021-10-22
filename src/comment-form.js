@@ -7,7 +7,7 @@ const textFlag = new CommentFlag();
 const submitComment = (event, id, user, text) => {
   event.preventDefault();
   if (textFlag.isValid) {
-    createComment(id, user, text);
+    createComment(id, user.value, text.value);
     user.value = '';
     text.value = '';
   }
