@@ -24,6 +24,10 @@ The application makes API calls to the TVMAZE API retrieving information about t
 
 https://german-cobian.github.io/TV-Shows/dist/index.html
 
+## Video Demo
+
+https://www.loom.com/share/63e669e5962b4403aaf329dd6da3d69e
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.

@@ -12,6 +12,11 @@ const updateTvShowHeader = (count) => {
   tvShowTitle.innerText = `TV-Shows (${count})`;
 };
 
+const likeCounter = (likesShow) => {
+  const likesShowNum = likesShow[0].likes;
+  return likesShowNum;
+};
+
 const displayTvShows = async () => {
   const tvShows = await getTvShows();
   const likes = await getLikes();
@@ -26,9 +31,11 @@ const displayTvShows = async () => {
 
     let numberOfLikes = '';
     if (likeObject.length > 0) {
-      numberOfLikes = `${likeObject[0].likes} likes`;
+      numberOfLikes = `${likeCounter(likeObject)} likes`;
+    } else {
+      numberOfLikes = '0 likes';
     }
-
+  
     const image = tvShows[i].show.image?.medium ?? 'https://pics.filmaffinity.com/sherlock_holmes-617003864-large.jpg';
     tvShowsList.insertAdjacentHTML('beforeend', ` 
       <div class="tvshow-list-container">
@@ -66,4 +73,4 @@ const displayTvShows = async () => {
   updateTvShowHeader(tvShowsCounter);
 };
 
-export default displayTvShows;
+export { displayTvShows, likeCounter };
