@@ -9,7 +9,7 @@ const countTvShows = () => {
 
 const updateTvShowHeader = (count) => {
   const tvShowTitle = document.getElementById('tvShows-link');
-  tvShowTitle.innerText = `Tv-Shows (${count})`;
+  tvShowTitle.innerText = `TV-Shows (${count})`;
 };
 
 const displayTvShows = async () => {
