@@ -1,5 +1,5 @@
-import { createComment } from "./comments-api";
-import CommentFlag from "./comment-flags.js";
+import { createComment } from './comments-api';
+import CommentFlag from './comment-flags.js';
 
 const popup = document.getElementById('popup');
 const textFlag = new CommentFlag();
@@ -10,8 +10,7 @@ const submitComment = (event, id, user, text) => {
     createComment(id, user.value, text.value);
     user.value = '';
     text.value = '';
-  }
-  else {
+  } else {
     window.alert('The input is not valid');
   }
 };
@@ -24,25 +23,23 @@ const validateText = (event, regexp, flag) => {
   if (regexp.test(textInput.value) && !dsrxp.test(textInput.value)) {
     textInput.classList.remove('invalid');
     flag.setTrue();
-  }
-  else {
+  } else {
     textInput.classList.add('invalid');
     flag.setFalse();
   }
-}
+};
 
 const countCharacters = (event, paragraph) => {
   const counter = 120 - event.currentTarget.value.length;
 
   if (counter < 1) {
-    paragraph.innerText = `Characters left: 0`;
+    paragraph.innerText = 'Characters left: 0';
     paragraph.style.setProperty('color', 'red');
-  }
-  else {
+  } else {
     paragraph.innerText = `Characters left: ${counter}`;
     paragraph.style.setProperty('color', 'black');
   }
-}
+};
 
 const generateCommentForm = (id) => {
   const commentForm = document.createElement('form');
@@ -59,8 +56,6 @@ const generateCommentForm = (id) => {
   usernameInput.type = 'text';
   usernameInput.title = 'No spaces. All lowercase. Min 3 chars. Max 15 chars.';
 
-  //usernameInput.addEventListener('input', (e) => validateText(e, new RegExp(/^[a-z0-9]{3,15}$/), userFlag));
-
   const countParagraph = document.createElement('p');
 
   const commentText = document.createElement('textarea');
@@ -69,7 +64,7 @@ const generateCommentForm = (id) => {
   commentText.required = true;
 
   commentText.addEventListener('input', (e) => {
-    validateText(e, new RegExp(/^["\w].{0,118}["?!\.\w]$/s), textFlag);
+    validateText(e, new RegExp(/^["\w].{0,118}["?!.\w]$/s), textFlag);
     countCharacters(e, countParagraph);
   });
 

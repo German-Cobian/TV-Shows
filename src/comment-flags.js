@@ -1,19 +1,19 @@
 export default class CommentFlag {
     #valid;
 
-    constructor(){
-        this.#valid = false;
+    constructor() {
+      this.#valid = false;
     }
 
     setTrue() {
-        this.#valid = true;
+      this.#valid = true;
     }
 
     setFalse() {
-        this.#valid = false;
+      this.#valid = false;
     }
 
     get isValid() {
-        return this.#valid;
+      return this.#valid;
     }
 }
