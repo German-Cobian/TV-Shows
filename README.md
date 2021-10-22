@@ -48,8 +48,8 @@ To get a local copy up and running follow these simple example steps.
 ## Authors
 
 👤 **Maximiliano Diaz**
-* GitHub: @mistermaxis
-* LinkedIn: Maximiliano Diaz
+* GitHub: [@mistermaxis](https://github.com/mistermaxis)
+* LinkedIn: [Maximiliano Diaz](https://www.linkedin.com/in/mistermaxis/)
 
 👤 **German Cobian**
 * GitHub: [@German Cobian](https://github.com/German-Cobian)
