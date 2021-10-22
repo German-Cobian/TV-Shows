@@ -22,7 +22,7 @@ The application makes API calls to the TVMAZE API retrieving information about t
 
 ## Live Demo
 
-https://github.com/German-Cobian/TV-Shows/settings/pages/dist/index.html
+https://german-cobian.github.io/TV-Shows/dist/index.html
 
 ## Getting Started
 
