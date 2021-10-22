@@ -1,4 +1,4 @@
-import { createComment, getComments } from './comments-api';
+import { createComment, getComments } from './comments-api.js';
 import CommentFlag from './comment-flags.js';
 
 const popup = document.getElementById('popup');

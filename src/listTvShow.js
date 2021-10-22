@@ -34,7 +34,7 @@ const displayTvShows = async () => {
     } else {
       numberOfLikes = '0 likes';
     }
-  
+
     const image = tvShows[i].show.image?.medium ?? 'https://pics.filmaffinity.com/sherlock_holmes-617003864-large.jpg';
     tvShowsList.insertAdjacentHTML('beforeend', ` 
       <div class="tvshow-list-container">

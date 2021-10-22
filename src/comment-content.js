@@ -1,4 +1,4 @@
-import countComments from './comment-counter';
+import countComments from './comment-counter.js';
 
 const popup = document.getElementById('popup');
 const bodyStyle = document.body.style;
