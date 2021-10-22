@@ -15,8 +15,7 @@ const createComment = async (id, username, comment) => {
     },
     body: JSON.stringify(commentBody),
   });
-  const status = await results.json();
-  return status;
+  return results.status;
 };
 const getComments = async (id) => {
   const result = await fetch(`${commentsURL}?item_id=${id}`);

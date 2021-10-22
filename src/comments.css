@@ -4,7 +4,7 @@
 }
 
 .popup-container {
-  position: absolute;
+  position: fixed;
   padding: 2rem 0;
   top: 0%;
   left: 0%;

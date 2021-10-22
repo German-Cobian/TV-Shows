@@ -90,11 +90,16 @@ const generatePopupContent = (tvShow, commentList) => {
 
   commentsContainer.appendChild(commentsHeader);
 
+  const commentsList = document.createElement('div');
+  commentsList.id = 'comments-list';
+
   commentList.forEach((comment) => {
     const commentItem = document.createElement('p');
     commentItem.innerText = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
-    commentsContainer.appendChild(commentItem);
+    commentsList.appendChild(commentItem);
   });
+
+  commentsContainer.appendChild(commentsList);
 
   innerContent.appendChild(imageClose);
   innerContent.appendChild(descriptionContainer);

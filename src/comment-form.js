@@ -1,13 +1,25 @@
-import { createComment } from './comments-api';
+import { createComment, getComments } from './comments-api';
 import CommentFlag from './comment-flags.js';
 
 const popup = document.getElementById('popup');
 const textFlag = new CommentFlag();
 
-const submitComment = (event, id, user, text) => {
+const submitComment = async (event, id, user, text) => {
   event.preventDefault();
   if (textFlag.isValid) {
-    createComment(id, user.value, text.value);
+    await createComment(id, user.value, text.value);
+
+    const commentsList = document.getElementById('comments-list');
+    const commentList = await getComments(id);
+
+    commentsList.innerHTML = '';
+
+    commentList.forEach((comment) => {
+      const commentItem = document.createElement('p');
+      commentItem.innerText = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
+      commentsList.appendChild(commentItem);
+    });
+
     user.value = '';
     text.value = '';
   } else {
