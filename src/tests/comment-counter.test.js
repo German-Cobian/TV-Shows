@@ -1,4 +1,4 @@
-import countComments from './comment-counter.js';
+import countComments from '../comment-counter.js';
 
 describe('countComments function', () => {
   test('Comments are counted correctly', () => {

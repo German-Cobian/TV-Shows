@@ -63,7 +63,7 @@ const generatePopupContent = (tvShow, commentList) => {
   descriptionTwo.classList.add('description-2');
 
   const rating = document.createElement('p');
-  rating.innerText = `Rating: ${tvShow.rating.average}/10`;
+  rating.innerText = `Rating: ${tvShow.rating.average ? tvShow.rating.average : 0}/10`;
 
   const genre = document.createElement('p');
   genre.innerText = `Genre: ${tvShow.genres[0]}`;
