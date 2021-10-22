@@ -2,12 +2,11 @@ import { createComment } from "./comments-api";
 import CommentFlag from "./comment-flags.js";
 
 const popup = document.getElementById('popup');
-const userFlag = new CommentFlag();
 const textFlag = new CommentFlag();
 
 const submitComment = (event, id, user, text) => {
   event.preventDefault();
-  if (userFlag.isValid && textFlag.isValid) {
+  if (textFlag.isValid) {
     createComment(id, user, text);
     user.value = '';
     text.value = '';
