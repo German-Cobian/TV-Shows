@@ -8,8 +8,6 @@ const displayCommentPopup = async (id) => {
   const tvShow = await getTvShowById(id);
   const commentList = await getComments(id);
 
-  console.log(commentList);
-
   generatePopupContent(tvShow, commentList);
   generateCommentForm(id);
 };

@@ -22,7 +22,6 @@ const displayTvShows = async () => {
   for (let i = 0; i < tvShows.length; i += 1) {
     // eslint-disable-next-line max-len, eqeqeq
     const likeObject = likes.filter((like) => like.item_id == tvShows[i].show.id);
-    console.log(likeObject);
 
     let numberOfLikes = '';
     if (likeObject.length > 0) {
