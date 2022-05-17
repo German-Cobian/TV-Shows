@@ -2,15 +2,15 @@
 
 # TV-Shows
 
-This website displays TV shows that display the word "comedy in their title. The user can input "likes" as well as comments on the shows of his/her choice. 
+This website displays TV shows that include the word "comedy in their title. The user can input "likes" as well as comments on the shows of his/her choice. 
 
 ![Display all](/src/img/Display-all.png?raw=true "Display all shows")
 
-The comment button brings up a popup window with information regarding the show (title, network, genre, language, rating and a short description of the plot).
+The comment button brings up a popup window with information regarding the show (title, network, genre, language, rating and a short description of the plot), the comments posted by other users, as well as the form for the current user to input a comment.
 
 ![Comment pop-up](/src/img/Comment-pop-up.png?raw=true "Comment pop-up")
 
-The application makes API calls to the [TVMAZE API](https://www.tvmaze.com/api) retrieving information about the movies. Another API, [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270), is responsible for saving likes and getting the number of likes, saving comments and getting a list of comments. All those functionalities are tied-up in a single codebase.
+The application makes API calls to the [TVMAZE API](https://www.tvmaze.com/api) retrieving information about the movies. Another API, [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270), is responsible for saving likes and fetching the number of likes, saving comments and fetching a list of comments. All those functionalities are tied-up in a single codebase.
 
 
 ## Built With
@@ -67,7 +67,7 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **German Cobian**
 * GitHub: [@German Cobian](https://github.com/German-Cobian)
-* Twitter: [@GermanCobian1](https://twitter.com/GermanCobian1)
+* Twitter: [@GermanCobian2](https://twitter.com/GermanCobian2)
 * LinkedIn: [@German Cobian](https://www.linkedin.com/in/german-cobian/)
 
 
