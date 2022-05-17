@@ -2,7 +2,7 @@
 
 # TV-Shows
 
-This website displays TV shows that include the word "comedy in their title. The user can input "likes" as well as comments on the shows of his/her choice. 
+This Javascript app displays TV shows that include the word "comedy in their title. The user can input "likes" as well as comments on the shows of his/her choice. 
 
 ![Display all](/src/img/Display-all.png?raw=true "Display all shows")
 
