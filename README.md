@@ -2,13 +2,16 @@
 
 # TV-Shows
 
-> This website displays TV shows in the comedy genre. The user can input "likes" as well as comments on the shows of his/her choice. The comment button brings up a popup window with information regarding the show (title, network, genre, language, rating and a short description of the plot).
+This website displays TV shows that display the word "comedy in their title. The user can input "likes" as well as comments on the shows of his/her choice. 
 
-![Captura de Pantalla 2021-10-21 a la(s) 20 43 02](https://user-images.githubusercontent.com/68709712/138390380-d320ee7d-96ef-4da6-ae0f-c80d57251335.png)
+![Display all](/src/img/Display-all.png?raw=true "Display all shows")
 
-![Captura de Pantalla 2021-10-21 a la(s) 20 43 37](https://user-images.githubusercontent.com/68709712/138390483-c7988110-1ef6-42f5-b13d-e88b7f4f16dc.png)
+The comment button brings up a popup window with information regarding the show (title, network, genre, language, rating and a short description of the plot).
 
-The application makes API calls to the TVMAZE API retrieving information about the movies. Another API, Involvement API, is responsible for saving likes and getting the number of likes, saving comments and getting a list of comments. All those functionalities are tied-up in a single codebase.
+![Comment pop-up](/src/img/Comment-pop-up.png?raw=true "Comment pop-up")
+
+The application makes API calls to the [TVMAZE API](https://www.tvmaze.com/api) retrieving information about the movies. Another API, [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270), is responsible for saving likes and getting the number of likes, saving comments and getting a list of comments. All those functionalities are tied-up in a single codebase.
+
 
 ## Built With
 
@@ -20,19 +23,24 @@ The application makes API calls to the TVMAZE API retrieving information about t
 * TvMaze API
 * Involvement API
 
+
 ## Live Demo
 
 https://german-cobian.github.io/TV-Shows/dist/index.html
+
 
 ## Video Demo
 
 https://www.loom.com/share/63e669e5962b4403aaf329dd6da3d69e
 
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
+
 ### Prerequisites
+
 
 ### Setup and Install
 
@@ -44,10 +52,12 @@ To get a local copy up and running follow these simple example steps.
 * To fire up the server run `npm start`
 * Visit `http://localhost:8080/` in your browser to get into the app
 
+
 ### Run tests
 
 * Refer to `https://jestjs.io/docs/getting-started` for instructions on how to install jest in your computer.
 * From the root folder, run `yarn test` or `npm run test`
+
 
 ## Authors
 
@@ -60,20 +70,23 @@ To get a local copy up and running follow these simple example steps.
 * Twitter: [@GermanCobian1](https://twitter.com/GermanCobian1)
 * LinkedIn: [@German Cobian](https://www.linkedin.com/in/german-cobian/)
 
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/German-Cobian/TV-Shows/issues).
+
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
+
 ## Acknowledgments
 
-* Microverse
-* Code reviewer(s).
+Guidelines for this project supplied by [Microverse](https://github.com/microverseinc/curriculum-javascript/tree/main/group-capstone).
+
 
 ## 📝 License
 
